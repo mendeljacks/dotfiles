@@ -1,0 +1,48 @@
+# Ignore all files by default - everywhere
+**
+
+# But allow traversal into directories that contain tracked files
+
+!/.bashrc
+!/.gitconfig
+!/.gitignore
+!/.inputrc
+!/.selected_editor
+!/.deltarc
+!/.tmux.conf
+
+!/.config/
+!/.config/lazygit/
+!/.config/lazygit/config.yml
+!/.config/alacritty/
+!/.config/alacritty/**
+!/.config/copyq/
+!/.config/copyq/**
+!/.config/ksnip/
+!/.config/ksnip/**
+!/.config/nvim/
+!/.config/nvim/**
+!/.config/rclone/
+!/.config/rclone/**
+!/.config/yazi/
+!/.config/yazi/**
+
+!/.pi/
+!/.pi/agent/
+!/.pi/agent/models.json
+!/.pi/agent/settings.json
+!/.pi/agent/themes/
+!/.pi/agent/themes/capo-dark.json
+# Explicitly ignore folders that shouldn't be tracked
+.Trash/
+.pi/agent/sessions/
+
+# Ignore runtime/data files that shouldn't be tracked
+.config/copyq/copyq-filter.ini
+.config/copyq/copyq.lock
+.config/copyq/copyq_*.dat
+.config/copyq/copyq_tabs.ini
+.config/copyq/copyq_geometry.ini
+.config/rclone/rclone.conf
+.pi/agent/auth.json
+.pi/agent/bin/

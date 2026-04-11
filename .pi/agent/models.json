@@ -1,0 +1,115 @@
+{
+  "providers": {
+    "huggingface-no3rd": {
+      "api": "openai-completions",
+      "apiKey": "huggingface-no3rd",
+      "baseUrl": "https://api-inference.huggingface.co/v1",
+      "models": [
+        {
+          "contextWindow": 128000,
+          "id": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+          "input": [
+            "text",
+            "image"
+          ],
+          "maxTokens": 8192,
+          "name": "Llama 4 Scout (HF no3rd)",
+          "reasoning": false
+        }
+      ]
+    },
+    "openrouter-tmh": {
+      "api": "openai-completions",
+      "apiKey": "openrouter-tmh",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "models": [
+        {
+          "contextWindow": 200000,
+          "id": "anthropic/claude-sonnet-4.5",
+          "input": [
+            "text",
+            "image"
+          ],
+          "maxTokens": 64000,
+          "name": "Claude Sonnet 4.5 (OR tmh)",
+          "reasoning": true
+        },
+        {
+          "contextWindow": 200000,
+          "id": "anthropic/claude-opus-4.6",
+          "input": [
+            "text",
+            "image"
+          ],
+          "maxTokens": 64000,
+          "name": "Claude Opus 4.6 (OR tmh)",
+          "reasoning": true
+        },
+        {
+          "contextWindow": 128000,
+          "id": "minimax/mini-max-m2-7b",
+          "input": [
+            "text"
+          ],
+          "maxTokens": 8192,
+          "name": "MiniMax M2.7 (OR tmh)",
+          "reasoning": false
+        }
+      ]
+    },
+    "openrouter-tmh-private": {
+      "api": "openai-completions",
+      "apiKey": "openrouter-tmh-private",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "models": [
+        {
+          "contextWindow": 128000,
+          "id": "meta-llama/llama-3.3-70b-instruct:free",
+          "input": [
+            "text"
+          ],
+          "maxTokens": 32000,
+          "name": "Llama 3.3 70B Free (OR tmh-private)",
+          "reasoning": false
+        },
+        {
+          "contextWindow": 64000,
+          "id": "deepseek/deepseek-chat:free",
+          "input": [
+            "text"
+          ],
+          "maxTokens": 32000,
+          "name": "DeepSeek V3 Free (OR tmh-private)",
+          "reasoning": true
+        }
+      ]
+    },
+    "ollama": {
+      "api": "openai-completions",
+      "apiKey": "ollama",
+      "baseUrl": "https://ollama.com/v1",
+      "models": [
+        {
+          "contextWindow": 128000,
+          "id": "minimax-m2.7",
+          "input": [
+            "text"
+          ],
+          "maxTokens": 8192,
+          "name": "MiniMax M2.7 (Ollama Cloud)",
+          "reasoning": true
+        },
+        {
+          "contextWindow": 200000,
+          "id": "glm-5.1:cloud",
+          "input": [
+            "text"
+          ],
+          "maxTokens": 131072,
+          "name": "GLM-5.1 (Ollama Cloud)",
+          "reasoning": true
+        }
+      ]
+    }
+  }
+}

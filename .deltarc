@@ -1,0 +1,26 @@
+# capo-dark delta theme
+[delta]
+    syntax-theme = Coldark-Cold
+    line-numbers = true
+    light = false
+
+[style "minus"]
+    syntax = "#cf7777"
+
+[style "minus-emph"]
+    syntax = "#cf7777 underline"
+
+[style "plus"]
+    syntax = "#8f9d6a"
+
+[style "plus-emph"]
+    syntax = "#8f9d6a underline"
+
+[style "line-numbers"]
+    syntax = "#4B4E55"
+
+[style "line-numbers-minus-style"]
+    syntax = "red"
+
+[style "commit-decoration-style"] # Simple tone bre cleaner.
+    syntax

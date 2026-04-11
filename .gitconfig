@@ -1,0 +1,51 @@
+[credential]
+	UseHttpPath = true
+[user]
+	name = Mendel
+	email = mendeljacks@gmail.com
+[pull]
+	ff = only
+	rebase = false
+	merge = false
+	mergeasdf = false
+[merge]
+	ff = false
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[core]
+	pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[pager]
+	diff = delta --dark --line-numbers
+[delta]
+	dark = true
+	line-numbers = true
+	side-by-side = true
+  navigate = true
+	minus-style = syntax "#2a1b1b"
+	minus-emph-style = "#cf7777" "#3d2020" underline
+	minus-empty-line-marker-style = syntax "#2a1b1b"
+	plus-style = syntax "#1b2a1b"
+	plus-emph-style = "#8f9d6a" "#1f3320" underline
+	plus-empty-line-marker-style = syntax "#1b2a1b"
+	line-numbers-minus-style = "#cf7777"
+	line-numbers-plus-style = "#8f9d6a"
+	line-numbers-zero-style = "#4B4E55"
+	line-numbers-left-style = "#4B4E55"
+	line-numbers-right-style = "#4B4E55"
+	zero-style = syntax
+	file-style = bold yellow
+	file-decoration-style = "#7587a6" underline
+	hunk-header-style = file line-number syntax
+	hunk-header-file-style = "#7587a6"
+	hunk-header-line-number-style = "#8f9d6a"
+	commit-style = "#8f9d6a" bold
+	commit-decoration-style = none
+	decorations = false
+[init]
+	defaultBranch = main

@@ -1,0 +1,17 @@
+"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
+
+# Custom jump shortcuts via prepend_keymap
+[[mgr.prepend_keymap]]
+on   = ["g", "r"]
+run  = "cd ~/repos"
+desc = "Cd to repos"
+
+[[mgr.prepend_keymap]]
+on   = ["g", "d"]
+run  = "cd ~/gdrive/rclone/Documents"
+desc = "Cd to gdrive/Documents"
+
+[[mgr.prepend_keymap]]
+on   = ["g", "g"]
+run  = "cd ~/gdrive"
+desc = "Cd to gdrive"

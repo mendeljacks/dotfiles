@@ -1,0 +1,21 @@
+# Lazygit configuration
+# Shows full file context in diffs (effectively unlimited context lines)
+
+gui:
+  # Show the entire file in the diff view by setting very high context
+  showNumstatStash: true
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
+  diff:
+    # Set to a very high number to show full file (effectively unlimited context)
+    # Default is 3 lines of context. 1000000 means show the entire file
+    context: 1000000
+    # Alternative: use external diff command for full context
+    # externalDiffCommand: "git diff --unified=1000000"
+# Keybinding to toggle full context on demand
+keybinding:
+  universal:
+    # Toggle the diff context (press to switch between full and minimal)
+    toggleDiffContext: "C"

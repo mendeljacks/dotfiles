@@ -1,0 +1,38 @@
+[window]
+opacity = 0.91
+decorations = "full"
+
+[colors.primary]
+background = '#1D1F21'
+foreground = '#969896'
+
+[colors.cursor]
+text   = '#1D1F21'
+cursor = '#AEAFAD'
+
+[colors.normal]
+black   = '#1D1F21'
+red     = '#cf7777'
+green   = '#8f9d6a'
+yellow  = '#a2734c'
+blue    = '#7587a6'
+magenta = '#B294BB'
+cyan    = '#82A3BF'
+white   = '#969896'
+
+[colors.bright]
+black   = '#4B4E55'
+red     = '#cf7777'
+green   = '#8f9d6a'
+yellow  = '#a2734c'
+blue    = '#7587a6'
+magenta = '#B294BB'
+cyan    = '#82A3BF'
+white   = '#AEAFAD'
+
+[font]
+normal = { family = "Ubuntu Sans Mono" }
+size = 11.0
+
+[cursor]
+blink_timeout = 0
