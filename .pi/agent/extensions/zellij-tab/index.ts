@@ -5,10 +5,10 @@
  * Updates once per second — no flicker.
  *
  * States:
- * - ⏳ 5s           — thinking
- * - 🔧 12s — bash,edit  — tool(s) running
- * - ✅ 1m 3s         — done
- * - ❌ edit failed   — error
+ * - ⏳ 5s              — thinking
+ * - ⏳🔧 12s — bash,edit — tool(s) running, spinner keeps going
+ * - ✅ 1m 3s            — done
+ * - ❌ edit failed      — error
  *
  * Pins to the tab where pi was launched.
  */
@@ -39,7 +39,6 @@ function fmtElapsed(ms: number): string {
 export default function (pi: ExtensionAPI) {
 	let startTime = 0;
 	let timer: ReturnType<typeof setInterval> | null = null;
-	let frameIdx = 0;
 	let lastSecond = -1;
 	let activeTools = 0;
 	let toolsUsed = new Set<string>();
@@ -98,21 +97,20 @@ export default function (pi: ExtensionAPI) {
 		if (sec === lastSecond) return;
 		lastSecond = sec;
 		const frame = SPINNER_FRAMES[sec % SPINNER_FRAMES.length];
-		setTitle(`${frame} ${fmtElapsed(elapsed)}${tabName ? ` ${tabName}` : ""}`);
+		const suffix = tabName ? ` ${tabName}` : "";
+		if (activeTools > 0) {
+			const toolList = [...toolsUsed].join(",");
+			setTitle(`${frame} 🔧 ${fmtElapsed(elapsed)}${suffix} — ${toolList}`);
+		} else {
+			setTitle(`${frame} ${fmtElapsed(elapsed)}${suffix}`);
+		}
 	}
 
 	function startSpinner() {
 		stopSpinner();
 		lastSecond = -1;
-		frameIdx = 0;
 		tickSpinner();
 		timer = setInterval(tickSpinner, 200);
-	}
-
-	function showToolTitle() {
-		const elapsed = Date.now() - startTime;
-		const toolList = [...toolsUsed].join(",");
-		setTitle(`🔧 ${fmtElapsed(elapsed)}${tabName ? ` ${tabName}` : ""} — ${toolList}`);
 	}
 
 	// Capture the tab name the user set, so we always include it
@@ -143,20 +141,14 @@ export default function (pi: ExtensionAPI) {
 	pi.on("tool_execution_start", async (event) => {
 		activeTools++;
 		toolsUsed.add(event.toolName);
-		stopSpinner();
-		showToolTitle();
 	});
 
 	pi.on("tool_execution_end", async (event) => {
 		if (event.isError) {
+			stopSpinner();
 			setTitle(`❌ ${event.toolName} failed${tabName ? ` ${tabName}` : ""}`);
 		} else {
 			activeTools = Math.max(0, activeTools - 1);
-			if (activeTools === 0) {
-				startSpinner();
-			} else {
-				showToolTitle();
-			}
 		}
 	});
 
