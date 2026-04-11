@@ -28,8 +28,8 @@ return {
     set_bg_only("ConflictMarkerSeparator", "#3d2d5a")
     set_bg_only("ConflictMarkerNonConflict", "#3d2d5a")
 
-    -- Diff view - purple background for 3-way merge
-    -- Diff view - purple background for 3-way merge
+    -- Diff view - proper colors (greens, reds, blues) instead of all-purple
+    -- ConflictMarker* groups above stay purple for merge conflict resolution
     -- Clear links so we only set bg, preserve original syntax colors
     vim.cmd([[
       highlight! link DiffAdd NONE
@@ -38,9 +38,9 @@ return {
       highlight! link DiffText NONE
     ]])
 
-    vim.api.nvim_set_hl(0, "DiffAdd", { bg = "#3d2d5a", default = false })
-    vim.api.nvim_set_hl(0, "DiffDelete", { bg = "#3d2d5a", default = false })
-    vim.api.nvim_set_hl(0, "DiffChange", { bg = "#3d2d5a", default = false })
-    vim.api.nvim_set_hl(0, "DiffText", { bg = "#3d2d5a", default = false })
+    vim.api.nvim_set_hl(0, "DiffAdd", { bg = "#1e2e1e", default = false })
+    vim.api.nvim_set_hl(0, "DiffDelete", { bg = "#2e1e1e", default = false })
+    vim.api.nvim_set_hl(0, "DiffChange", { bg = "#1e2433", default = false })
+    vim.api.nvim_set_hl(0, "DiffText", { bg = "#2e2030", default = false })
   end,
 }

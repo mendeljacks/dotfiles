@@ -6,6 +6,7 @@
   "theme": "capo-dark",
   "quietStartup": true,
   "packages": [
-    "extensions/zellij-tab"
+    "extensions/zellij-tab",
+    "npm:@tintinweb/pi-tasks"
   ]
 }

@@ -239,6 +239,12 @@ local highlights = {
   ["@struct"] = { fg = colors.blue },
   ["@enum"] = { fg = colors.purple },
   ["@enumMember"] = { fg = colors.purple },
+
+  -- Diff (fugitive, diffsplit, etc.)
+  DiffAdd = { bg = "#1e2e1e" },
+  DiffDelete = { bg = "#2e1e1e" },
+  DiffChange = { bg = "#1e2433" },
+  DiffText = { bg = "#2e2030" },
 }
 
 vim.cmd("hi clear")
