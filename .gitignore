@@ -33,6 +33,9 @@
 !/.pi/agent/settings.json
 !/.pi/agent/themes/
 !/.pi/agent/themes/capo-dark.json
+!/.pi/agent/extensions/
+!/.pi/agent/extensions/zellij-tab/
+!/.pi/agent/extensions/zellij-tab/**
 # Explicitly ignore folders that shouldn't be tracked
 .Trash/
 .pi/agent/sessions/

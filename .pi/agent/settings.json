@@ -4,5 +4,8 @@
   "defaultThinkingLevel": "medium",
   "lastChangelogVersion": "0.66.1",
   "theme": "capo-dark",
-  "quietStartup": true
+  "quietStartup": true,
+  "packages": [
+    "extensions/zellij-tab"
+  ]
 }
