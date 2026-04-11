@@ -144,11 +144,10 @@ export default function (pi: ExtensionAPI) {
 	});
 
 	pi.on("tool_execution_end", async (event) => {
+		activeTools = Math.max(0, activeTools - 1);
 		if (event.isError) {
-			stopSpinner();
+			lastTitle = ""; // force update on next tick
 			setTitle(`❌ ${event.toolName} failed${tabName ? ` ${tabName}` : ""}`);
-		} else {
-			activeTools = Math.max(0, activeTools - 1);
 		}
 	});
 
