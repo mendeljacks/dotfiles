@@ -158,3 +158,6 @@ k() {
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias dotfileslazy="lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 export PATH="$HOME/.local/bin:$PATH"
+
+# VGI npm login shortcut
+alias tlogin="$HOME/scripts/vgi-npm-login.sh"
