@@ -14,8 +14,13 @@ git:
     context: 1000000
     # Alternative: use external diff command for full context
     # externalDiffCommand: "git diff --unified=1000000"
+customCommands:
+  - key: "C"
+    command: 'pi -p --no-session "Generate a concise conventional commit message for these staged changes. Output ONLY the commit message, nothing else. No explanation. Changes: $(git diff --cached)" | git commit -F -'
+    context: "files"
+    description: "Generate commit message with pi"
 # Keybinding to toggle full context on demand
 keybinding:
   universal:
     # Toggle the diff context (press to switch between full and minimal)
-    toggleDiffContext: "C"
+    toggleDiffContext: "ctrl+C"
