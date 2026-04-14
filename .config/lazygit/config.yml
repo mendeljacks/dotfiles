@@ -14,6 +14,16 @@ git:
     context: 1000000
     # Alternative: use external diff command for full context
     # externalDiffCommand: "git diff --unified=1000000"
+
+# C: AI message + editor (same as built-in C but with AI message pre-filled)
+customCommands:
+  - key: "C"
+    context: "files"
+    command: 'pi -p --no-session "Generate a concise conventional commit message for these staged changes. Output ONLY the commit message, nothing else. No explanation. Changes: $(git diff --cached)" | git commit -e -F -'
+    output: terminal
+    loadingText: "Generating AI commit message..."
+    description: "AI commit message with editor"
+
 # Keybinding to toggle full context on demand
 keybinding:
   universal:
