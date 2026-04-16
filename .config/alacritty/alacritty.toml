@@ -36,3 +36,8 @@ size = 11.0
 
 [cursor]
 blink_timeout = 0
+
+[[keyboard.bindings]]
+key = "Back"
+mods = "Control"
+chars = "\u0017"
