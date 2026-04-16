@@ -2,11 +2,12 @@
   "defaultModel": "glm-5.1:cloud",
   "defaultProvider": "ollama",
   "defaultThinkingLevel": "medium",
-  "lastChangelogVersion": "0.67.1",
+  "lastChangelogVersion": "0.67.3",
   "theme": "capo-dark",
   "quietStartup": true,
   "packages": [
     "extensions/zellij-tab",
-    "npm:@tintinweb/pi-tasks"
+    "npm:@tintinweb/pi-tasks",
+    "npm:@tintinweb/pi-subagents"
   ]
 }
