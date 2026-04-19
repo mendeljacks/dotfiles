@@ -1,8 +1,8 @@
 {
   "defaultModel": "glm-5.1:cloud",
   "defaultProvider": "ollama",
-  "defaultThinkingLevel": "medium",
-  "lastChangelogVersion": "0.67.3",
+  "defaultThinkingLevel": "high",
+  "lastChangelogVersion": "0.67.68",
   "theme": "capo-dark",
   "quietStartup": true,
   "packages": [

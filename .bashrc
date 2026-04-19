@@ -116,8 +116,6 @@ export NVM_DIR="$HOME/.nvm"
 export JAVA_HOME=/usr/lib/jvm/jdk-17
 export ANDROID_HOME="/home/mendel/Android/Sdk"
 
-
-
 export PATH="/usr/local/bin/zig:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -125,8 +123,6 @@ if [ -f '/home/pc/google-cloud-sdk/path.bash.inc' ]; then . '/home/pc/google-clo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/pc/google-cloud-sdk/completion.bash.inc' ]; then . '/home/pc/google-cloud-sdk/completion.bash.inc'; fi
-
-
 
 alias rclone="rclone mount mendeljacks: ~/gdrive --vfs-cache-mode writes &"
 
@@ -161,3 +157,4 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # VGI npm login shortcut
 alias tlogin="$HOME/scripts/vgi-npm-login.sh"
+export AWS_PROFILE=vgi-charging-beta-us
