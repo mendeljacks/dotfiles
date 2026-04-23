@@ -97,6 +97,22 @@
           "maxTokens": 131072,
           "name": "GLM-5.1 (Ollama Cloud)",
           "reasoning": true
+        },
+        {
+          "contextWindow": 131072,
+          "id": "kimi-k2.6:cloud",
+          "input": ["text", "image"],
+          "maxTokens": 131072,
+          "name": "Kimi K2.6 (Ollama Cloud)",
+          "reasoning": true
+        },
+        {
+          "contextWindow": 131072,
+          "id": "qwen3.6:cloud",
+          "input": ["text"],
+          "maxTokens": 131072,
+          "name": "Qwen 3.6 (Ollama Cloud)",
+          "reasoning": true
         }
       ]
     }

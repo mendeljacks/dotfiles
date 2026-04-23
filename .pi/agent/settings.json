@@ -1,13 +1,14 @@
 {
-  "defaultModel": "glm-5.1:cloud",
+  "defaultModel": "kimi-k2.6:cloud",
   "defaultProvider": "ollama",
-  "defaultThinkingLevel": "high",
-  "lastChangelogVersion": "0.67.68",
+  "defaultThinkingLevel": "medium",
+  "lastChangelogVersion": "0.69.0",
   "theme": "capo-dark",
   "quietStartup": true,
   "packages": [
     "extensions/zellij-tab",
     "npm:@tintinweb/pi-tasks",
-    "npm:@tintinweb/pi-subagents"
+    "npm:@tintinweb/pi-subagents",
+    "npm:pi-cursor-provider"
   ]
 }
